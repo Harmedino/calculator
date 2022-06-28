@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+</head>
+<body>
+
+    <button class="for" id="for" onclick="calculator()"> press for calculator</button>
+    <div class="lot">
+    <div class="body" >
+        <div class="header">
+      <!-- <img src="./image/header.PNG" alt=""> -->
+      <div class="close">
+        <p>calculator</p>
+        <div class="max">
+            <img src="./image/max.PNG" alt="" class="rey">
+            <img src="./image/mi.PNG" alt="" class="rey">
+            <button onclick="cleaqr()"> <img src="./image/ca.PNG" alt="" class="red" > </button>
+        </div>
+      </div>
+      <div class="sta">
+        <div class="fafa">
+        <i class="fa fa-bars"></i>
+        <p>Standard</p>
+        </div>
+        <img src="./image/rotate.png" alt="">
+      </div>
+        </div>
+        <div class="top" id="top"></div>
+        <div class="screen" id="screen">
+         0
+        </div>
+        <div class="cal-buttons-row">
+            <button class="cal-buttons trans">Mc</button>
+            <button class="cal-buttons trans">MR</button>
+            <button class="cal-buttons trans">M+</button>
+            <button class="cal-buttons trans">M-</button>
+            <button class="cal-buttons trans">Ms</button>
+            <button class="cal-buttons trans">M <i class="fa fa-caret-down"></i></button>
+        </div>
+        <div class="cal-buttons-row">
+            <button class="cal-buttons light">%</button>
+            <button class="cal-buttons light">&radic;</button>
+            <button class="cal-buttons light">x <sup>2</sup></button>
+            <button class="cal-buttons light ">&#x215F;x</button>
+        </div>
+        <div class="cal-buttons-row">
+            <button class="cal-buttons light "id="clear" >CE</button>
+            <button class="cal-buttons light" id="clear" onclick="clickOut()">C</button>
+            <button class="cal-buttons light"><img src="./image/can.png" alt=""></button>
+            <button class="cal-buttons light wheat" onclick="opera('/')">&divide;</button>
+        </div>
+        <div class="cal-buttons-row">
+            <button class="cal-buttons grey " id="num7" onclick="clickMe(7)" >7</button>
+            <button class="cal-buttons grey" id="num8" onclick="clickMe(8)" >8</button>
+            <button class="cal-buttons grey" id="num9" onclick="clickMe(9)" >9</button>
+            <button class="cal-buttons light wheat " onclick="opera('*')">&times;</button>
+        </div>
+        <div class="cal-buttons-row">
+            <button class="cal-buttons grey" id="num4" onclick="clickMe(4)">4</button>
+            <button class="cal-buttons grey" id="num5" onclick="clickMe(5)">5</button>
+            <button class="cal-buttons grey" id="num6" onclick="clickMe(6)" >6</button>
+            <button class="cal-buttons light wheat" onclick="opera('-')">-</button>
+        </div>
+        <div class="cal-buttons-row">
+            <button class="cal-buttons grey" id="num1" onclick="clickMe(1)">1</button>
+            <button class="cal-buttons grey" id="num2" onclick="clickMe(2)">2</button>
+            <button class="cal-buttons grey" id="num3"onclick="clickMe(3)" >3</button>
+            <button class="cal-buttons light wheat" onclick="opera('+')">+</button>
+        </div>
+        <div class="cal-buttons-row">
+            <button class="cal-buttons light ">&plusmn;</button>
+            <button class="cal-buttons grey" id="num0" onclick="clickMe(0)" >0</button>
+            <button class="cal-buttons grey" id="dot" onclick="clickMe('.')" >.</button>
+            <button class="cal-buttons light wheat" onclick="operaa('=')">=</button>
+        </div>
+      
+       
+        </div>
+    </div>
+</body>
+</html>
+<script src="./js/index.js"></script>
