@@ -1,16 +1,38 @@
 
-let input1, input2, sumUP, minus, divide, times, operan;
+let input1, input2, sumUP, minus, divide, times, operan, tall;
 let press = false;
+let screen = document.getElementById('screen').innerHTML
 function calculator() {
     document.querySelector(".body").style.display = "inherit";
     document.querySelector('#for').style.display = "none"
 }
-let screen = document.getElementById('screen')
+function onScreen() {
+
+
+    document.querySelector("#screen").style.display = "inherit"
+    document.querySelector("#top").style.display = "inherit"
+    document.querySelector(".on").style.display = "none"
+    document.querySelector(".off-screen").style.display = "none"
+    document.querySelector(".off").style.display = "inherit"
+    document.querySelector('.screen').innerHTML = "0"
+    document.querySelector('.top').innerHTML = ""
+    screen = document.querySelector('.welcome').style.display = "inherit"
+}
+function offScreen() {
+    document.querySelector('.off-screen').style.display = "inherit"
+    document.querySelector('.screen').style.display = "none"
+    document.querySelector('.top').style.display = "none"
+    document.querySelector('.on').style.display = "inherit"
+    document.querySelector('.off').style.display = "none"
+  
+
+}
+
 lott = screen.innerHTML
 function clickMe(click) {
 
     let screen = document.getElementById('screen')
-    
+
     if (operan != "") {
         screen.innerHTML = ""
         press = false
@@ -19,6 +41,7 @@ function clickMe(click) {
     }
     screen.innerHTML += click
     input2 = screen.innerHTML
+
 
 }
 
@@ -39,33 +62,48 @@ function opera(sign) {
     // console.log(top.innerHTML);
     // press = true
     divide = top.innerHTML
-
 }
+let ans
 function operaa(lol) {
 
-    let ans
+    let top2 = document.getElementById("top")
+
+    if (lol == '=' && ans) {
+        // console.log(ans);
+        let tall = ans
+        input1 = tall
+        top2.innerHTML = input1 += sumUP + input2 + lol
+
+    }
 
     if (sumUP === '*') {
         ans = Number(input1) * Number(input2)
+        top2.innerHTML = input1 += sumUP + input2 + lol
     }
     else if (sumUP === '+') {
         ans = Number(input1) + Number(input2)
+        top2.innerHTML = input1 += sumUP + input2 + lol
     }
     else if (sumUP === '-') {
         ans = Number(input1) - Number(input2)
+        top2.innerHTML = input1 += sumUP + input2 + lol
     }
     else if (sumUP === "/") {
-        ans = Number(input1) / Number(input2)
+        ans = Number(input1) ^ Number(input2)
+        top2.innerHTML = input1 += sumUP + input2 + lol
+    }else {
+        ans = "0"
+        top2.innerHTML = ""
     }
+    
+
     document.getElementById('screen').innerHTML = ans
-    document.getElementById('top').innerHTML = ""
-    let top2 = document.getElementById("top")
-    top2.innerHTML = divide += input2 += lol
-    times = lol
+
+
 
 }
 function clickOut() {
-   
+
     document.getElementById('screen').innerHTML = ''
     document.getElementById('top').innerHTML = ""
 }
