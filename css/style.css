@@ -169,3 +169,9 @@ padding: 10px;
     background-color: rgb(161, 107, 35);
 }
 }
+
+@media(max-width:450px){
+    body{
+        padding:90px ;
+    }
+}
